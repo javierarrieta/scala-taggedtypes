@@ -15,3 +15,5 @@ addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.fu
 enablePlugins(GitVersioning, BuildInfoPlugin)
 
 git.useGitDescribe := true
+
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

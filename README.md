@@ -1,4 +1,4 @@
-#Scala Tagged Types
+# Scala Tagged Types
 
 This small library uses macros to reduce the boilerplate when using shapeless tagged types.
 

@@ -1,5 +1,8 @@
 # Scala Tagged Types
 
+
+[![Build status](https://travis-ci.org/javierarrieta/scala-taggedtypes.svg?branch=master)](https://travis-ci.org/javierarrieta/scala-taggedtypes)
+
 This small library uses macros to reduce the boilerplate when using shapeless tagged types.
 
 To be able to use this macro you will need to add the macro paradise plugin compiler to your build:

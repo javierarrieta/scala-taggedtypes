@@ -1,4 +1,5 @@
-name := "scala-taggedtypes"
+val packageName = "scala-taggedtypes"
+name := packageName
 
 
 val scalaV = "2.12.7"
@@ -9,7 +10,8 @@ val commonSettings = Seq(
     "org.scalatest" %% "scalatest" % "3.0.1" % Test
   ),
   scalaVersion := scalaV,
-  organization := "es.tdev.taggedtypes"
+  organization := "es.tdev.taggedtypes",
+  bintrayPackage := packageName
 )
 
 lazy val root = project.in(file("."))

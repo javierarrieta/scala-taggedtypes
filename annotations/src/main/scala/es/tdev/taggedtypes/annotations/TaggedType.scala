@@ -19,7 +19,7 @@ object TaggedType {
 
     val extendedTypename: TypeName = c.prefix.tree match {
       case q"new TaggedType[$t]()" => TypeName(show(t))
-      case t => c.abort(c.enclosingPosition, "Could not detect class to extend, use @TaggedType[my_class]")
+      case _ => c.abort(c.enclosingPosition, "Could not detect class to extend, use @TaggedType[my_class]")
     }
 
     def valid(t: TypeName): Boolean = t.toString.endsWith(suffix)

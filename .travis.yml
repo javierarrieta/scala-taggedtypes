@@ -16,7 +16,7 @@ cache:
   - $HOME/.sbt
 
 script:
-- sbt ++$TRAVIS_SCALA_VERSION clean test
+- sbt ++$TRAVIS_SCALA_VERSION +clean +test
 
 # See https://www.scala-sbt.org/1.x/docs/Travis-CI-with-sbt.html
 # Tricks to avoid unnecessary cache updates

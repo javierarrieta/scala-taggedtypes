@@ -1,4 +1,4 @@
-package jarrieta.taggedtypes.annotations
+package es.tdev.taggedtypes.annotations
 
 import org.scalatest.{FlatSpec, Matchers}
 

@@ -30,7 +30,7 @@ Using this macro you will only have to annotate the `sealed trait`.
 **Important:** your sealed trait has to end with the `Tag` suffix.
 
 ```scala
-import jarrieta.taggedtypes.annotations.TaggedType
+import es.tdev.taggedtypes.annotations.TaggedType
 
 @TaggedType[String] sealed trait MyCustomStringTag
 

@@ -1,18 +1,26 @@
 name := "scala-taggedtypes"
 
-organization := "jarrieta"
 
-scalaVersion := "2.12.7"
+val scalaV = "2.12.7"
 
-libraryDependencies ++= Seq(
-  "com.chuusai" %% "shapeless" % "2.3.2",
-  "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-  "org.scalatest" %% "scalatest" % "3.0.1" % Test
+val commonSettings = Seq(
+  libraryDependencies ++= Seq(
+    "com.chuusai" %% "shapeless" % "2.3.2",
+    "org.scalatest" %% "scalatest" % "3.0.1" % Test
+  ),
+  scalaVersion := scalaV,
+  organization := "es.tdev.taggedtypes"
 )
 
-addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)
+lazy val root = project.in(file("."))
+  .enablePlugins(BuildInfoPlugin)
+  .settings(publish := {})
+  .aggregate(macros)
 
-enablePlugins(GitVersioning, BuildInfoPlugin)
+lazy val macros = project.in(file("annotations"))
+  .settings(commonSettings)
+
+enablePlugins(GitVersioning)
 
 git.useGitDescribe := true
 

@@ -1,4 +1,4 @@
-package jarrieta.taggedtypes.annotations
+package es.tdev.taggedtypes.annotations
 
 import scala.language.experimental.macros
 import scala.reflect.macros.whitebox.Context

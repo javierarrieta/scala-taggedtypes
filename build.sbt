@@ -11,7 +11,8 @@ val commonSettings = Seq(
   ),
   scalaVersion := scalaV,
   organization := "es.tdev.taggedtypes",
-  bintrayPackage := packageName
+  bintrayPackage := packageName,
+  licenses ++= Seq(("MIT", url("http://opensource.org/licenses/MIT"))),
 )
 
 lazy val root = project.in(file("."))
